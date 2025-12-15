@@ -72,20 +72,66 @@
                     <div class="card-content">
                         <h3>Portfolio Personnel</h3>
                         <p>
-                            Je l'ai réaliser tous seul, il a pour objectifs de présenter mes compétences,
-                            mon parcours et mes projets. Ce site est développé en HTML et CSS, mettant en avant
-                            mes compétences en développement web front-end.
-                            J'ai donc réalisé ce portfolio en HTML et CSS.
-                            Ce projet m'a permis de renforcer mes compétences en développement web et de créer une
-                            vitrine professionnelle pour mes futurs employeurs.
+                            Création complète de mon portfolio vitrine en HTML/CSS pour présenter mes compétences et trouver une alternance.
                         </p>
+                        <a href="javascript:void(0)" onclick="openSidebar()" class="btn-link">Voir détails &rarr;</a>
                     </div>
                 </div>
+                <div id="overlay" class="overlay" onclick="closeSidebar()"></div> <div id="project-sidebar" class="sidebar">
+        <button class="close-btn" onclick="closeSidebar()">&times;</button> <div class="sidebar-content">
+            <span class="sidebar-tag">Développement Web</span>
+            <h2>Portfolio Personnel</h2>
+            
+            <div class="sidebar-section">
+                <h3>Contexte</h3>
+                <p>
+                    Dans le cadre de ma première année de BUT R&T, nous devions réaliser un projet 
+                    complet en HTML/CSS pour créer notre portfolio personnel.
+                </p>
+            </div>
 
-                </div>
+            <div class="sidebar-section">
+                <h3>Objectif</h3>
+                <p>
+                    L'objectif était double : apprendre à structurer une page web complète (HTML) et 
+                    maîtriser la mise en forme moderne (CSS) pour obtenir un résultat professionnel et responsive.
+                </p>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Travail réalisé</h3>
+                <ul class="sidebar-list">
+                    <li>Conception de la maquette et de la structure (HTML).</li>
+                    <li>Stylisation CSS.</li>
+                    <li>Portfolio lisible et fonctionnel</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Résultat</h3>
+                <p>
+                    Le site est fonctionnel et rapide. Il me permet aujourd'hui de partager mes compétences 
+                    et projets de manière interactive.
+                </p>
+            </div>
+    </div>
+
+    <script>
+        function openSidebar() {
+            document.getElementById("project-sidebar").classList.add("active");
+            document.getElementById("overlay").classList.add("active");
+            document.body.style.overflow = "hidden"; // Empêche le scroll derrière
+        }
+
+        function closeSidebar() {
+            document.getElementById("project-sidebar").classList.remove("active");
+            document.getElementById("overlay").classList.remove("active");
+            document.body.style.overflow = "auto"; // Réactive le scroll
+        }
+    </script>
+            </div>
         </div>
     </section>
-
     <section class="section">
         <div class="container">
             <h2>Mes atouts</h2>
