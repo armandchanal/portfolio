@@ -171,3 +171,61 @@ footer {
     .hero h1 { font-size: 2rem; }
     .nav-links { display: none; } /* Simplification pour mobile */
 }
+
+/* --- BOITE COMPÉTENCES & QUALITÉS --- */
+.dual-box {
+    display: flex;              /* Met les deux colonnes côte à côte */
+    background: var(--white);
+    border: 1px solid #eee;
+    border-radius: 12px;        /* Coins arrondis */
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03); /* Légère ombre pour le relief */
+}
+
+.box-col {
+    flex: 1;                    /* Chaque colonne prend 50% de la largeur */
+    padding: 3rem;
+}
+
+/* Ligne de séparation verticale entre les deux */
+.separator {
+    border-left: 1px solid #eee;
+    background-color: #fafafa;  /* Fond très légèrement différent pour le contraste */
+}
+
+.box-col h3 {
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+}
+
+/* Liste des items */
+.list-items li {
+    display: flex;              /* Aligne l'icône et le texte */
+    align-items: center;
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Style de l'icône */
+.icon {
+    font-size: 1.5rem;          /* Taille de l'emoji */
+    margin-right: 15px;         /* Espace entre emoji et texte */
+    min-width: 30px;            /* Pour que tout soit bien aligné verticalement */
+    text-align: center;
+}
+
+/* --- ADAPTATION MOBILE --- */
+@media (max-width: 768px) {
+    .dual-box {
+        flex-direction: column; /* Empile les colonnes sur mobile */
+    }
+    .separator {
+        border-left: none;      /* Enlève la ligne verticale */
+        border-top: 1px solid #eee; /* Ajoute une ligne horizontale */
+    }
+    .box-col {
+        padding: 2rem;
+    }
+}
