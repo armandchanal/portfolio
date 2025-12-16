@@ -32,7 +32,7 @@ ul { list-style: none; }
     padding: 0 20px;
 }
 
-.section { padding: var(--spacing) 0; }
+.section { padding: var(--spacing) 0;}
 .bg-light { background-color: var(--bg-light); }
 .text-center { text-align: center; }
 
@@ -65,7 +65,8 @@ h2 { font-size: 2rem; margin-bottom: 2rem; }
     justify-content: space-between;
     align-items: center;
 }
-.logo { font-weight: bold; font-size: 1.5rem; }
+.logo { font-weight: bold; font-size: 1.5rem; transition: color 0.3s ease; }
+.logo:hover { color: var(--primary-color); }
 .nav-links { display: flex; gap: 20px; }
 .nav-links a:hover { color: var(--primary-color); }
 
@@ -300,4 +301,105 @@ footer {
 /* ADAPTATION MOBILE */
 @media (max-width: 600px) {
     .sidebar { width: 100%; } /* Prend tout l'écran sur téléphone */
+}
+
+/* From Uiverse.io by WhiteNervosa */ 
+.btn2 {
+  font-size: 14px;
+  color: #1f2937;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.btn2:focus,
+.btn2:hover {
+  color: #555;
+}
+
+.btn2:focus:after,
+.btn2:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.btn2:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #555;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+.cv-img {
+    width: 45%;
+    height: 45%;
+    height: auto;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.CV {
+    width: 100%;           /* Prend toute la place dispo sur mobile */
+    max-width: 800px;      /* Ne dépasse pas 800px sur ordi */
+    margin: 0 auto;        /* 0 en haut/bas, AUTO à gauche/droite (C'est ça qui centre) */
+    text-align: center;
+}
+
+h2.CV {
+    text-align: center;
+}
+
+/* From Uiverse.io by iZOXVL */ 
+.boton-elegante {
+  padding: 15px 30px;
+  border: 2px solid #2c2c2c;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.4s ease;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.boton-elegante::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+.boton-elegante:hover::after {
+  transform: scale(4);
+}
+
+.boton-elegante:hover {
+  border-color: #666666;
+  background: #292929;
 }
