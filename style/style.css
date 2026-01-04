@@ -148,7 +148,7 @@ h2 { font-size: 2rem; margin-bottom: 2rem; }
     padding: 2rem;
     transition: box-shadow 0.3s;
 }
-.card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+.card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: ease-out; }
 .card h3 { font-size: 1.25rem; }
 .card a {
     color: var(--primary-color);
@@ -345,25 +345,18 @@ footer {
 
 .cv-img {
     width: 45%;
-    height: 45%;
     height: auto;
+    display: block;
+    margin: 0 auto;
     border: 1px solid #eee;
     border-radius: 8px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-}
-
-.CV {
-    width: 100%;           /* Prend toute la place dispo sur mobile */
-    max-width: 800px;      /* Ne dépasse pas 800px sur ordi */
-    margin: 0 auto;        /* 0 en haut/bas, AUTO à gauche/droite (C'est ça qui centre) */
-    text-align: center;
 }
 
 h2.CV {
     text-align: center;
 }
 
-/* From Uiverse.io by iZOXVL */ 
 .boton-elegante {
   padding: 15px 30px;
   border: 2px solid #2c2c2c;
@@ -377,6 +370,8 @@ h2.CV {
   position: relative;
   overflow: hidden;
   font-weight: bold;
+  display: inline-block;
+  margin-top: 2rem;
 }
 
 .boton-elegante::after {
@@ -384,8 +379,6 @@ h2.CV {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   background: radial-gradient(
     circle,
     rgba(255, 255, 255, 0.25) 0%,

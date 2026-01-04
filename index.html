@@ -17,6 +17,7 @@
                 <li><a href="#projects" class="btn2">Projets</a></li>
                 <li><a href="#atouts" class="btn2">Compétences</a></li>
                 <li><a href="#interests" class="btn2">Loisirs</a></li>
+                <li><a href="#CV" class="btn2">CV</a></li>
                 <li><a href="#contacts" class="btn2">Contacts</a></li>
             </ul>
         </div>
@@ -62,6 +63,85 @@
                 Je suis actuellement à la recherche d'une <strong>alternance pour la rentrée 2026</strong> 
                 (rythme : 1 mois en entreprise / 1 mois en formation).
             </p>
+        </div>
+    </section>
+
+<section id="formation" class="section bg-light">
+        <div class="container">
+            <h2>Formations</h2>
+            <div class="project-grid">
+                
+                <div class="card">
+                    <div class="card-content">
+                        <h3>BUT Réseaux et Télécommunications</h3>
+                        <p>
+                            IUT d'Aubière (2025 - Présent)<br>
+                        </p>
+                        <a href="javascript:void(0)" onclick="openSidebar()" class="btn-link">Voir détails &rarr;</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>BAC STI2D</h3>
+                        <p>
+                            Lycée Jean Zay (2023 - 2025)<br>
+                        </p>
+                        <a href="javascript:void(0)" onclick="openSidebar()" class="btn-link">Voir détails &rarr;</a>
+                    </div>
+                </div>
+        <div id="overlay" class="overlay" onclick="closeSidebar()"></div> <div id="project-sidebar" class="sidebar">
+        <button class="close-btn" onclick="closeSidebar()">&times;</button> <div class="sidebar-content">
+            <span class="sidebar-tag">Développement Web</span>
+            <h2>Portfolio Personnel</h2>
+            
+            <div class="sidebar-section">
+                <h3>Contexte</h3>
+                <p>
+                    Dans le cadre de ma première année de BUT R&T, nous devions réaliser un projet 
+                    complet en HTML/CSS pour créer notre portfolio personnel.
+                </p>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Objectif</h3>
+                <p>
+                    L'objectif était double : apprendre à structurer une page web complète (HTML) et 
+                    maîtriser la mise en forme moderne (CSS) pour obtenir un résultat professionnel et responsive.
+                </p>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Travail réalisé</h3>
+                <ul class="sidebar-list">
+                    <li>Conception de la maquette et de la structure (HTML).</li>
+                    <li>Stylisation CSS.</li>
+                    <li>Portfolio lisible et fonctionnel</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Résultat</h3>
+                <p>
+                    Le site est fonctionnel et rapide. Il me permet aujourd'hui de partager mes compétences 
+                    et projets de manière interactive.
+                </p>
+            </div>
+    </div>
+
+    <script>
+        function openSidebar() {
+            document.getElementById("project-sidebar").classList.add("active");
+            document.getElementById("overlay").classList.add("active");
+            document.body.style.overflow = "hidden"; // Empêche le scroll derrière
+        }
+
+        function closeSidebar() {
+            document.getElementById("project-sidebar").classList.remove("active");
+            document.getElementById("overlay").classList.remove("active");
+            document.body.style.overflow = "auto"; // Réactive le scroll
+        }
+    </script>
+            </div>
         </div>
     </section>
 
@@ -234,7 +314,7 @@
     <section id="CV" class="section">
         <div class="container text-center">
                 <h2>CV</h2>
-                <img src="img/CV_Armand_CHANAL_V02.png" alt="" srcset="" class="cv-img"><br>
+                <img src="img/CV_Armand_CHANAL_V02.png" alt="" srcset="" class="cv-img"></img>
                 <a href="download/CV_Armand_CHANAL_V02.pdf" class="boton-elegante">Télécharger le cv !</a>
         </div>
     </section>
