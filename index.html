@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <nav class="navbar">
         <div class="container">
             <a href="#" class="logo">Armand CHANAL</a>
@@ -67,7 +66,7 @@
     </section>
 
 <section id="formation" class="section bg-light">
-        <div class="container">
+    <div class="container">
             <h2>Formations</h2>
             <div class="project-grid">
                 
@@ -77,7 +76,37 @@
                         <p>
                             IUT d'Aubière (2025 - Présent)<br>
                         </p>
-                        <a href="javascript:void(0)" onclick="openSidebar()" class="btn-link">Voir détails &rarr;</a>
+                        <a href="javascript:void(0)" onclick="openSidebar('sidebar-but')" class="btn-link">Voir détails &rarr;</a>                    
+                    </div>
+                    <div id="sidebar-but" class="sidebar">
+                        <button class="close-btn" onclick="closeSidebar()">&times;</button>
+                        <div class="sidebar-content">
+                            <span class="sidebar-tag">Formation</span>
+                            <h2>BUT Réseaux et Télécommunications</h2>
+                            <div class="sidebar-section">
+                                <h3>Objectifs de la formation</h3>
+                                <p>
+                                    Le BUT Réseaux et Télécommunications est une formation de 3 ans,
+                                    qui vise à former des professionnels capables de concevoir,déployer et gérer des infrastructures réseaux et télécoms. 
+                                    La formation couvre des domaines tels que l'administration des systèmes et la sécurité des réseaux.
+                                </p>
+                            </div>
+                            <div class="sidebar-section">
+                                <h3>Pourquoi le BUT R&T ?</h3>
+                                <p>
+                                    J'ai choisi cette formation car elle correspond parfaitement à mes aspirations professionnelles.
+                                    Depuis quelque année, j'aime mettre en place des réseaux et comprendre leur fonctionnement, en mettant en place des services qui permmettent de faciliter certains aspect de moi.
+                                    Le BUT R&T me permet d'acquérir des compétences techniques solides dans ce domaine, tout en ayant une approche pratique grâce aux nombreux projets intégré a la formations.
+                                    
+                                </p>
+                            </div>
+                            <div class="sidebar-section">
+                                <h3>Et maintenant ?</h3>
+                                <p>
+                                   Actuellement en première année, je suis en train d'acquérir des compétences solides en administration systèmes et réseaux.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
@@ -86,63 +115,50 @@
                         <p>
                             Lycée Jean Zay (2023 - 2025)<br>
                         </p>
-                        <a href="javascript:void(0)" onclick="openSidebar()" class="btn-link">Voir détails &rarr;</a>
+                        <a href="javascript:void(0)" onclick="openSidebar('sidebar-sti2d')" class="btn-link">Voir détails &rarr;</a>                    
+                    </div>
+                    <div id="sidebar-sti2d" class="sidebar">
+                        <button class="close-btn" onclick="closeSidebar()">&times;</button>
+                        <div class="sidebar-content">
+                            <span class="sidebar-tag">Formation</span>
+                            <h2>BAC STI2D</h2>
+                            <div class="sidebar-section">
+                                <h3>Objectifs de la formation</h3>
+                                <p>
+                                    La formation STI2D (Sciences et Technologies de l'Industrie et du Développement Durable)
+                                    est une formation accéssible après la seconde. En terminal nous avons 4 spécialités au choix :
+                                    <ul class="sidebar-list">
+                                        <li>SIN : Système d'Information et Numérique</li>
+                                        <li>AC : Architecture et Construction</li>
+                                        <li>EE : Énergie et Environnement</li>
+                                        <li>ITEC : Innovation Technologique et Éco-Conception</li>
+                                    </ul>
+                                    J'ai choisi la spécialité SIN car elle correspondait le mieux à mes attentes et à mon projet professionnel.
+                                </p>
+                            </div>
+                            <div class="sidebar-section">
+                                <h3>Pourquoi la STI2D ?</h3>
+                                <p>
+                                    J'ai choisi cette formation car elle me permet d'acquérir des compétences techniques solides
+                                    dans le domaine de l'informatique et des réseaux, tout en ayant une approche pratique. De plus,
+                                    l'informatique a toujours été une passion pour moi, et cette formation me permet de la développer davantage
+                                    cette passion et d'avancer dans mon parcours professionnel.
+                                </p>
+                            </div>
+                            <div class="sidebar-section">
+                                <h3>Et maintenant ?</h3>
+                                <p>
+                                    J'ai obtenu mon BAC STI2D en 2025. Cette formation m'a permis d'acquérir des bases solides et m'a permis d'ouvrir des voies
+                                    vers des études supérieures dans le domaine des réseaux et télécommunications. 
+                                    C'est pourquoi je poursuis actuellement mes études en BUT R&T à l'IUT d'Aubière.
+                                    Elle m'a également permis de développer des compétences transversales telles que le travail en équipe, la gestion de projet, la résolution de problèmes et la communication avec d'autres personnes.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-        <div id="overlay" class="overlay" onclick="closeSidebar()"></div> <div id="project-sidebar" class="sidebar">
-        <button class="close-btn" onclick="closeSidebar()">&times;</button> <div class="sidebar-content">
-            <span class="sidebar-tag">Développement Web</span>
-            <h2>Portfolio Personnel</h2>
-            
-            <div class="sidebar-section">
-                <h3>Contexte</h3>
-                <p>
-                    Dans le cadre de ma première année de BUT R&T, nous devions réaliser un projet 
-                    complet en HTML/CSS pour créer notre portfolio personnel.
-                </p>
-            </div>
-
-            <div class="sidebar-section">
-                <h3>Objectif</h3>
-                <p>
-                    L'objectif était double : apprendre à structurer une page web complète (HTML) et 
-                    maîtriser la mise en forme moderne (CSS) pour obtenir un résultat professionnel et responsive.
-                </p>
-            </div>
-
-            <div class="sidebar-section">
-                <h3>Travail réalisé</h3>
-                <ul class="sidebar-list">
-                    <li>Conception de la maquette et de la structure (HTML).</li>
-                    <li>Stylisation CSS.</li>
-                    <li>Portfolio lisible et fonctionnel</li>
-                </ul>
-            </div>
-
-            <div class="sidebar-section">
-                <h3>Résultat</h3>
-                <p>
-                    Le site est fonctionnel et rapide. Il me permet aujourd'hui de partager mes compétences 
-                    et projets de manière interactive.
-                </p>
-            </div>
-    </div>
-
-    <script>
-        function openSidebar() {
-            document.getElementById("project-sidebar").classList.add("active");
-            document.getElementById("overlay").classList.add("active");
-            document.body.style.overflow = "hidden"; // Empêche le scroll derrière
-        }
-
-        function closeSidebar() {
-            document.getElementById("project-sidebar").classList.remove("active");
-            document.getElementById("overlay").classList.remove("active");
-            document.body.style.overflow = "auto"; // Réactive le scroll
-        }
-    </script>
-            </div>
         </div>
+    </div>
     </section>
 
     <section id="projects" class="section bg-light">
@@ -156,10 +172,52 @@
                         <p>
                             Création complète de mon portfolio vitrine en HTML/CSS pour présenter mes compétences et trouver une alternance.
                         </p>
-                        <a href="javascript:void(0)" onclick="openSidebar()" class="btn-link">Voir détails &rarr;</a>
+                        <a href="javascript:void(0)" onclick="openSidebar('sidebar-portfolio')" class="btn-link">Voir détails &rarr;</a>  
+                    </div>
+                    <div id="sidebar-portfolio" class="sidebar">
+                        <button class="close-btn" onclick="closeSidebar()">&times;</button>
+                        <div class="sidebar-content">
+                            <span class="sidebar-tag">Développement Web</span>
+                    <h2>Portfolio Personnel</h2>
+                    
+                    <div class="sidebar-section">
+                        <h3>Contexte</h3>
+                        <p>
+                            Dans le cadre de ma première année de BUT R&T, nous devions réaliser un projet 
+                            complet en HTML/CSS pour créer notre portfolio personnel.
+                        </p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Objectif</h3>
+                        <p>
+                            L'objectif était double : apprendre à structurer une page web complète (HTML) et 
+                            maîtriser la mise en forme moderne (CSS) pour obtenir un résultat professionnel et responsive.
+                        </p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Travail réalisé</h3>
+                        <ul class="sidebar-list">
+                            <li>Conception de la maquette et de la structure (HTML).</li>
+                            <li>Stylisation CSS.</li>
+                            <li>Portfolio lisible et fonctionnel</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Résultat</h3>
+                        <p>
+                            Le site est fonctionnel et rapide. Il me permet aujourd'hui de partager mes compétences 
+                            et projets de manière interactive.
+                        </p>
+                    </div>
+                        </div>
                     </div>
                 </div>
-        <div id="overlay" class="overlay" onclick="closeSidebar()"></div> <div id="project-sidebar" class="sidebar">
+                
+            </div>
+        <div id="project-sidebar" class="sidebar">
         <button class="close-btn" onclick="closeSidebar()">&times;</button> <div class="sidebar-content">
             <span class="sidebar-tag">Développement Web</span>
             <h2>Portfolio Personnel</h2>
@@ -197,20 +255,6 @@
                 </p>
             </div>
     </div>
-
-    <script>
-        function openSidebar() {
-            document.getElementById("project-sidebar").classList.add("active");
-            document.getElementById("overlay").classList.add("active");
-            document.body.style.overflow = "hidden"; // Empêche le scroll derrière
-        }
-
-        function closeSidebar() {
-            document.getElementById("project-sidebar").classList.remove("active");
-            document.getElementById("overlay").classList.remove("active");
-            document.body.style.overflow = "auto"; // Réactive le scroll
-        }
-    </script>
             </div>
         </div>
     </section>
@@ -288,7 +332,7 @@
                 <div class="card">
                     <div class="card-content">
                         <h3>Musique</h3>
-                        <p>Depuis 6 ans, la musique fait partie de mon quotidien et me permet d'évacuer mes émotions. Récemment, je me suis lancé dans le beatmaking, transformant cet intérêt en véritable passion.</p>
+                        <p>Depuis 6 ans, la musique fait partie de mon quotidien et me permet d'évacuer mes émotions. Récemment (depuis 1 an), je me suis lancé dans la MAO, transformant cet intérêt en véritable passion.</p>
                     </div>
                 </div>
 
@@ -339,6 +383,31 @@
                 </div>
         </div>
     </footer>
+
+<script>
+    function openSidebar(sidebarId) {
+        // Ouvre la barre spécifique demandée
+        document.getElementById(sidebarId).classList.add("active");
+        // Active l'overlay (le fond noir)
+        document.getElementById("overlay").classList.add("active");
+        // Empêche le scroll
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeSidebar() {
+        // Ferme toutes les sidebars ouvertes
+        const sidebars = document.querySelectorAll('.sidebar');
+        sidebars.forEach(sidebar => {
+            sidebar.classList.remove('active');
+        });
+        
+        // Désactive l'overlay
+        document.getElementById("overlay").classList.remove("active");
+        // Réactive le scroll
+        document.body.style.overflow = "auto";
+    }
+</script>
+<div id="overlay" class="overlay" onclick="closeSidebar()"></div>
 
 </body>
 </html>
