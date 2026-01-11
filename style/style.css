@@ -7,6 +7,11 @@
     --white: #ffffff;
     --spacing: 4rem;            /* Espacement entre les sections */
 }
+html, body {
+    scroll-behavior: smooth !important;
+    overflow-x: hidden; /* Empêche le scroll horizontal indésirable */
+    width: 100%;
+}
 
 /* --- RESET DE BASE --- */
 * {
@@ -14,7 +19,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
