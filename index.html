@@ -13,6 +13,7 @@
             <a href="#" class="logo">Armand CHANAL</a>
             <ul class="nav-links">
                 <li><a href="#about" class="btn2">À propos</a></li>
+                <li><a href="#formation" class="btn2">Formations</a></li>
                 <li><a href="#projects" class="btn2">Projets</a></li>
                 <li><a href="#atouts" class="btn2">Compétences</a></li>
                 <li><a href="#interests" class="btn2">Loisirs</a></li>
@@ -258,69 +259,65 @@
             </div>
         </div>
     </section>
+
     <section id="atouts" class="section">
         <div class="container">
-            <h2>Compétences</h2>
+            <h2 class="text-center">Mes Compétences</h2>
             
-            <div class="dual-box">
-                
-                <div class="box-col">
-                    <h3>Compétences Techniques</h3>
-                    <ul class="list-items">
-                        <li>
-                            <span class="icon">🖥️</span>
-                            <span>Utiliser, configurer, et administrer Linux</span>
-                        </li>
-                        <li>
-                            <span class="icon">🌐</span>
-                            <span>Base de réseaux (TCP/IP, VLAN)</span>
-                        </li>
-                        <li>
-                            <span class="icon">🛜</span>
-                            <span>Mettre en place un plan d'adressage réseau</span>
-                        </li>
-                        <li>
-                            <span class="icon">💻</span>
-                            <span>Développement Web (HTML/CSS)</span>
-                        </li>
-                        <li>
-                            <span class="icon">🗣️</span>
-                            <span>Bonne communication en Anglais</span>
-                        </li>
-                        <li>
-                            <span class="icon">🔧</span>
-                            <span>Maintenance et dépannage informatique simple</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="box-col separator">
-                    <h3>Qualités Humaines</h3>
-                    <ul class="list-items">
-                        <li>
-                            <span class="icon">🤝</span>
-                            <span>Esprit d'équipe, bon relationnel</span>
-                        </li>
-                        <li>
-                            <span class="icon">🔎</span>
-                            <span>Rigueur</span>
-                        </li>
-                        <li>
-                            <span class="icon">💡</span>
-                            <span>Curiosité</span>
-                        </li>
-                        <li>
-                            <span class="icon">🚀</span>
-                            <span>Déterminé à accomplir ma tâche</span>
-                        </li>
-                        <li>
-                            <span class="icon">📚</span>
-                            <span>Envie d'apprendre</span>
-                        </li>
-                    </ul>
-                </div>
-
+            <div class="tabs-container">
+                <button class="tab-btn active" onclick="switchTab('tech')">Techniques</button>
+                <button class="tab-btn" onclick="switchTab('human')">Humaines & Langues</button>
             </div>
+
+            <div id="tech" class="skills-grid active-grid">
+    
+    <div class="skill-card" onclick="openSidebar('sidebar-reseaux')" style="cursor: pointer;">
+        <div class="skill-icon">🖥️</div>
+        <h3>Réseaux & Systèmes</h3>
+        <p>Administration Linux</p>
+        <p>TCP/IP, VLAN</p>
+        <p style="font-size: 0.9rem; margin-top: 10px; color: var(--primary-color);">Voir les détails &rarr;</p>
+    </div>
+
+    <div class="skill-card" onclick="openSidebar('sidebar-web')" style="cursor: pointer;">
+        <div class="skill-icon">💻</div>
+        <h3>Développement Web</h3>
+        <p>HTML5 / CSS3</p>
+        <p>Création de Portfolio</p>
+        <p style="font-size: 0.9rem; margin-top: 10px; color: var(--primary-color);">Voir les détails &rarr;</p>
+    </div>
+
+    <div class="skill-card" onclick="openSidebar('sidebar-maintenance')" style="cursor: pointer;">
+        <div class="skill-icon">🔧</div>
+        <h3>Maintenance</h3>
+        <p>Dépannage Hardware</p>
+        <p>Installation de postes</p>
+        <p style="font-size: 0.9rem; margin-top: 10px; color: var(--primary-color);">Voir les détails &rarr;</p>
+    </div>
+
+</div>
+
+            <div id="human" class="skills-grid">
+                <div class="skill-card" onclick="openSidebar('sidebar-humain')" style="cursor: pointer;">
+                    <div class="skill-icon">🤝</div>
+                    <h3>Savoir-Être</h3>
+                    <p>Esprit d'équipe</p>
+                    <p>Rigueur & Curiosité</p>
+                    <p>Patient</p>
+                    <p style="font-size: 0.9rem; margin-top: 10px; color: var(--primary-color);">Voir les détails &rarr;</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🗣️</div>
+                    <h3>Langues</h3>
+                    <p>Anglais Technique</p>
+                    <p>Compréhension écrite</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
         </div>
     </section>
 
@@ -333,6 +330,7 @@
                     <div class="card-content">
                         <h3>Musique</h3>
                         <p>Depuis 6 ans, la musique fait partie de mon quotidien et me permet d'évacuer mes émotions. Récemment (depuis 1 an), je me suis lancé dans la MAO, transformant cet intérêt en véritable passion.</p>
+                        <a href="https://drive.google.com/drive/folders/1RjdVhSGrC1FQeh7fB_Ac16N9l1hf0tao?usp=sharing" target="_blank">Voir mes musiques &rarr;</a>
                     </div>
                 </div>
 
@@ -406,8 +404,228 @@
         // Réactive le scroll
         document.body.style.overflow = "auto";
     }
+
+    function switchTab(tabName) {
+        // 1. Cacher tous les contenus
+        document.getElementById('tech').classList.remove('active-grid');
+        document.getElementById('human').classList.remove('active-grid');
+
+        // 2. Désactiver tous les boutons
+        const buttons = document.querySelectorAll('.tab-btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        // 3. Afficher le contenu demandé et activer le bouton cliqué
+        document.getElementById(tabName).classList.add('active-grid');
+        
+        // Trouver le bouton cliqué pour lui mettre la classe active
+        // (L'événement onclick passe implicitement 'event', on l'utilise ici pour cibler le bouton)
+        event.currentTarget.classList.add('active');
+    }
+    function toggleAccordion(button) {
+        // 1. Basculer la classe 'active' sur le bouton (pour la flèche et la couleur)
+        button.classList.toggle("active");
+
+        // 2. Récupérer le contenu associé (le div juste après le bouton)
+        var content = button.nextElementSibling;
+
+        // 3. Si c'est ouvert, on ferme. Si c'est fermé, on ouvre.
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null; // Fermer
+        } else {
+            // On définit la hauteur max sur la hauteur réelle du contenu (scrollHeight)
+            content.style.maxHeight = content.scrollHeight + "px"; 
+        }
+    }
 </script>
 <div id="overlay" class="overlay" onclick="closeSidebar()"></div>
+
+<div id="sidebar-reseaux" class="sidebar">
+    <button class="close-btn" onclick="closeSidebar()">&times;</button>
+    
+    <div class="sidebar-content">
+        <span class="sidebar-tag">Compétence Technique</span>
+        <h2>Réseaux Informatiques</h2>
+        <p style="margin-bottom: 2rem; color: #666;">Architecture & Administration</p>
+
+        <div class="accordion">
+            
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                    Équipements réseaux
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="accordion-body">
+                    <p>Au cours de ma formation, dans les différent traveaux dirigé (TD), traveaux pratique (TP) et situation d'apprentissage évaluer (SAE), j'ai manipulé divers équipements qui m'ont permis d'acquérir c'est compétences techniques :</p>
+                    <ul class="sidebar-list">
+                        <li><strong>Switchs (Cisco) :</strong> Configuration CLI, sécurisation, création de VLAN, configuration des ports.</li>
+                        <li><strong>Routeurs (Cisco) :</strong> Configuration CLI, sécurisation, routage statique et dynamique (RIP et OSPF).</li>
+                        <li><strong>Wi-Fi (D-Link) :</strong> Configuration de points d'accès wifi et supervision sur interface web.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                    Services Réseaux & Linux
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="accordion-body">
+                    <p>Mise en place de services essentiels sur serveurs Linux :</p>
+                    <ul class="sidebar-list">
+                        <li><strong>Configuration : </strong>mise en place d'adressage IP sur les serveurs Linux</li>
+                        <li><strong>Services : </strong>Serveur Web (Apache)</li>
+                        <li><strong>Sécurité : </strong>Mise en place de par-feu, afin d'assurer la sécurité de l'équipements.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                    Virtualisation
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="accordion-body">
+                    <p>Création et gestion de machines virtuelles.</p>
+                    <ul class="sidebar-list">
+                        <li><strong>Services utilisés : </strong>Utilisation de VMware et VirtualBox.</li>
+                        <li><strong>Utilisation : </strong>Déploiment de serveurs Linux et ordinateur windows.</li>
+                        <li><strong>Réseaux : </strong>Configuration de bridge afin d'intégré la machines virtuelles au réseau.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        </div>
+</div>
+
+<div id="sidebar-web" class="sidebar">
+    <button class="close-btn" onclick="closeSidebar()">&times;</button>
+    
+    <div class="sidebar-content">
+        <span class="sidebar-tag">Compétence Technique</span>
+        <h2>Développement</h2>
+        <p style="margin-bottom: 2rem; color: #666;">Création de sites et de protgrammes</p>
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                    Développement Web
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="accordion-body">
+                    <p>Maîtrise des fondamentaux du Web :</p>
+                    <ul class="sidebar-list">
+                        <li><strong>HTML5 :</strong> Structure sémantique (header, nav, section...).</li>
+                        <li><strong>CSS3 :</strong> Mise en page moderne (Flexbox, Grid), variables CSS, Designe Responsive.</li>
+                        <li><strong>JS (JavaScript) : </strong>Création de sidebar en cliquant sur des onglets, permet de changer d'onglets (switchTab), animations du site.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                    Python
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="accordion-body">
+                    <p>Développement de script ou algorithmes permettant de exécuter des tâches plus rapidements :</p>
+                    <ul class="sidebar-list">
+                        <li>Automatisation de configuration réseau ou de configuration linux.</li>
+                        <li>Traitements de données.</li>
+                    </ul>
+                </div>
+            </div>
+            
+             <div class="accordion-item">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                    Bash
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="accordion-body">
+                    <p>Mise en pratique de bash, afin d'éxécuter des scripts :</p>
+                    <ul class="sidebar-list">
+                        <li>Utilisation de bash, afin d'utiliser les commandes linux plus complexe</li>
+                        <li>Automatisation de configuration linux plus poussés, ou de tâches réucrrente.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="sidebar-maintenance" class="sidebar">
+    <button class="close-btn" onclick="closeSidebar()">&times;</button>
+    
+    <div class="sidebar-content">
+        <span class="sidebar-tag">Compétence Technique</span>
+        <h2>Maintenance Informatique</h2>
+        <p style="margin-bottom: 2rem; color: #666;">Matériel & Support Utilisateur</p>
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                    Hardware (Matériel)
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="accordion-body">
+                    <p>Intervention physique sur les machines :</p>
+                    <ul class="sidebar-list">
+                        <li>Montage et démontage d'unités centrales.</li>
+                        <li>Diagnostic de pannes matérielles (RAM, Disque dur, Alimentation).</li>
+                        <li>Remplacement de composants défectueux.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                    Software (Logiciel)
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="accordion-body">
+                    <p>Gestion des systèmes d'exploitation :</p>
+                    <ul class="sidebar-list">
+                        <li>Installation et configuration de Windows 10/11.</li>
+                        <li>Installation de distributions Linux (Ubuntu, Debian, Arch Linux), et configuration.</li>
+                        <li>Installation de pilotes et logiciels diverses (suties adobe, suite bureautiques...).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                    Support Utilisateur
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="accordion-body">
+                    <p>Assistance technique :</p>
+                    <ul class="sidebar-list">
+                        <li>Aide à la prise en main des outils informatiques.</li>
+                        <li>Résolution de problèmes de connexion réseau simples.</li>
+                        <li>Bonne communication pour comprendre le besoin de l'utilisateur.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="sidebar-humain" class="sidebar">
+    <button class="close-btn" onclick="closeSidebar()">&times;</button>
+    
+    <div class="sidebar-content">
+        <span class="sidebar-tag">Compétence Huamines</span>
+        <h2>Savoir-Être</h2>
+        <p style="margin-bottom: 2rem; color: #666;">Qualités Personnelles</p>
+
+        <strong>Esprit d'équipe : </strong>
+        <p>Au cours des différent projet de la formations, nous avons du mener a bien un projet ensemble qui été de [Dévelloper]. Grâce a cela, j'ai pu dévelloper mes compétences pour travailler en équipe et mener a bien ce projets. J'ai appris a comment bien communiquer et organiser.</p> <br>
+        <strong>Rigueur & Curiosité : </strong>
+        <p>Dans le domaine de l'informatique, il est important d'être rigoureux et curieux. En effet, il faut être rigoureux dans son travail pour éviter les erreurs et les problèmes. Il faut également être curieux pour apprendre de nouvelles choses et se tenir à jour des dernières technologies.</p> <br>
+        <strong>Patience : </strong>
+        <p>La patience est une qualité essentielle dans le domaine de l'informatique. En effet, il faut souvent faire face à des problèmes complexes qui nécessitent du temps et de la patience pour être résolus. Il faut également être patient avec les utilisateurs qui peuvent avoir des difficultés à comprendre certaines choses.</p>
+    </div>
+</div>
 
 </body>
 </html>
