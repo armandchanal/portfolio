@@ -32,7 +32,7 @@
             </div>
 
             <div class="hero-image">
-                <img src="img/CV_Armand_CHANAL_V02.jpeg" alt="">
+                <img src="img/Photo de profil.jpeg" alt="">
             </div>
 
         </div>
@@ -211,6 +211,63 @@
                         <p>
                             Le site est fonctionnel et rapide. Il me permet aujourd'hui de partager mes compétences 
                             et projets de manière interactive.
+                        </p>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3>CreateAccademyLauncher</h3>
+                        <p>
+                            Création d'un launcher pour un serveur Minecraft, permettant aux utilisateurs de se connecter facilement et de gérer leurs mods.
+                        </p>
+                        <a href="javascript:void(0)" onclick="openSidebar('sidebar-launcher')" class="btn-link">Voir détails &rarr;</a>  
+                    </div>
+                    <div id="sidebar-launcher" class="sidebar">
+                        <button class="close-btn" onclick="closeSidebar()">&times;</button>
+                        <div class="sidebar-content">
+                            <span class="sidebar-tag">Développement Web et JS</span>
+                    <h2>CreateAccademyLauncher</h2>
+                    
+                    <div class="sidebar-image-container">
+        <img src="img/Create Aca Screen.png" 
+             alt="Interface du Launcher CreateAcademy" 
+             class="zoomable-img" 
+             onclick="openLightbox(this)">
+        <p class="img-caption">Cliquez pour agrandir</p>
+    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Contexte</h3>
+                        <p>
+                            Dans le cadre d'un projet commun avec un amis, il était nécessaire de créer un launcher personnalisé pour notre serveur Minecraft. Permettant aux joueurs de se connecter facilement, de gérer leurs mods et de utiliser un outil pour éviter la triches (Anti-Cheat).
+                        </p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Objectif</h3>
+                        <p>
+                            L'objectif était de développer un launcher convivial et fonctionnel, intégrant des fonctionnalités spécifiques pour améliorer l'expérience des joueurs sur notre serveur Minecraft et de le rendre sécurisé.
+                        </p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Travail réalisé</h3>
+                        <ul class="sidebar-list">
+                            <li>Conception de la maquette et de la structure (HTML).</li>
+                            <li>Stylisation CSS.</li>
+                            <li>Implémentation de fonctionnalités spécifiques (JavaScript).</li>
+                            <li>Intégration d'un système d'anti-cheat.</li>
+                            <li>Mise en place des fichiers sur un serveur.</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Résultat</h3>
+                        <p>
+                            Le launcher est opérationnel et utilisé par les joueurs du serveur Minecraft. Il offre une expérience utilisateur fluide et sécurisée, contribuant ainsi à la popularité et à la stabilité de notre communauté de joueurs.
                         </p>
                     </div>
                         </div>
@@ -436,6 +493,24 @@
             content.style.maxHeight = content.scrollHeight + "px"; 
         }
     }
+
+    // --- GESTION DE LA LIGHTBOX ---
+
+    function openLightbox(imgElement) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        
+        // On récupère la source de l'image cliquée pour la mettre dans le lightbox
+        lightboxImg.src = imgElement.src;
+        
+        // On affiche le lightbox
+        lightbox.classList.add('active');
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.remove('active');
+    }
     
 </script>
 <div id="overlay" class="overlay" onclick="closeSidebar()"></div>
@@ -620,12 +695,17 @@
         <p style="margin-bottom: 2rem; color: #666;">Qualités Personnelles</p>
 
         <strong>Esprit d'équipe : </strong>
-        <p>Au cours des différent projet de la formations, nous avons du mener a bien un projet ensemble qui été de [Dévelloper]. Grâce a cela, j'ai pu dévelloper mes compétences pour travailler en équipe et mener a bien ce projets. J'ai appris a comment bien communiquer et organiser.</p> <br>
+        <p>Pour le Launcher Minecraft, j'ai du collaborer avec d'autres développeurs pour créer une interface utilisateur conviviale et fonctionnelle. Sachant qu'il fallait que cela fonctionne avec le serveur minecraft, il était donc important de bien communiquer et de respecter les normes de développement. Cela m'a permis de développer mon esprit d'équipe et de travailler efficacement en collaboration.</p> <br>
         <strong>Rigueur & Curiosité : </strong>
-        <p>Dans le domaine de l'informatique, il est important d'être rigoureux et curieux. En effet, il faut être rigoureux dans son travail pour éviter les erreurs et les problèmes. Il faut également être curieux pour apprendre de nouvelles choses et se tenir à jour des dernières technologies.</p> <br>
+        <p>Dans la création du portfolio et du launcher Minecraft, il fallait organiser le travail afin de rendre un projet sérieux. C'est projet m'ont permis de développer cette qualité et donc de devenir plus rigoureux et curieux.</p> <br>
         <strong>Patience : </strong>
-        <p>Lors de la création d’un serveur, en tant que projet personnel, j’ai rencontré plusieurs erreurs, comme le faites que mes services ne se lancé pas, ou bien que le réseau ne marcher pas. Ce projet m’a permis de développer m’a patience qui est une force qui me permet d’arriver a termes dans mes projets.</p>
+        <p>Lors de la création du portfolio, j’ai rencontré plusieurs erreurs, comme le faites que ma mise en pages n'était pas bonnes, ou encore que le site n'était pas bon. Ce projet m’a permis de développer m’a patience qui est une force qui me permet d’arriver a termes dans mes projets.</p>
     </div>
+</div>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close-lightbox">&times;</span>
+    <img id="lightbox-img" src="" alt="Agrandissement">
 </div>
 
 </body>
