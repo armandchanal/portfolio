@@ -602,7 +602,7 @@ h2.CV {
 
 /* --- LIGHTBOX (AGRANDISSEMENT) --- */
 .lightbox {
-    position: fixed;
+    position: fixed; /* Toujours au-dessus */
     top: 0;
     left: 0;
     width: 100%;
@@ -648,3 +648,48 @@ h2.CV {
     transition: 0.2s;
 }
 .close-lightbox:hover { color: var(--primary-color); }
+
+/* --- RESPONSIVE NAVBAR --- */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Already present, but good to be explicit */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 85px; /* Adjust based on navbar height */
+        left: 0;
+        background: var(--white);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        padding: 1rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}

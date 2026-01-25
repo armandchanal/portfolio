@@ -73,3 +73,20 @@ function closeLightbox() {
     const lightbox = document.getElementById('lightbox');
     lightbox.classList.remove('active');
 }
+
+// --- GESTION DU MENU HAMBURGER ---
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            // Basculer la classe 'active' sur le menu de navigation
+            navMenu.classList.toggle('active');
+
+            // Mettre à jour l'attribut ARIA pour l'accessibilité
+            const isExpanded = navMenu.classList.contains('active');
+            hamburger.setAttribute('aria-expanded', isExpanded);
+        });
+    }
+});

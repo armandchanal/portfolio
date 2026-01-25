@@ -12,7 +12,12 @@
     <nav class="navbar">
         <div class="container">
             <a href="#" class="logo">Armand CHANAL</a>
-            <ul class="nav-links">
+            <button class="hamburger" id="hamburger-menu" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="nav-menu">
                 <li><a href="#about" class="btn2">À propos</a></li>
                 <li><a href="#formation" class="btn2">Formations</a></li>
                 <li><a href="#projects" class="btn2">Projets</a></li>
@@ -33,7 +38,7 @@
             </div>
 
             <div class="hero-image">
-                <img src="img/Photo de profil.jpeg" alt="Photo de profil Armand Chanal">
+                <img src="img/photo.jpeg" alt="Photo de Profil" class="profile-pic">
             </div>
 
         </div>
@@ -128,12 +133,14 @@
                                 <p>
                                     La formation STI2D (Sciences et Technologies de l'Industrie et du Développement Durable)
                                     est une formation accessible après la seconde. En terminale, nous avons 4 spécialités au choix :
+                                </p>
                                     <ul class="sidebar-list">
                                         <li>SIN : Système d'Information et Numérique</li>
                                         <li>AC : Architecture et Construction</li>
                                         <li>EE : Énergie et Environnement</li>
                                         <li>ITEC : Innovation Technologique et Éco-Conception</li>
                                     </ul>
+                                <p>
                                     J'ai choisi la spécialité SIN car elle correspondait le mieux à mes attentes et à mon projet professionnel.
                                 </p>
                             </div>
@@ -232,7 +239,7 @@
                     <h2>CreateAcademyLauncher</h2>
                     
                     <div class="sidebar-image-container">
-        <img src="img/Create Aca Screen.png" 
+        <img src="img/Create_Aca_Screen.png" 
              alt="Interface du Launcher CreateAcademy" 
              class="zoomable-img" 
              onclick="openLightbox(this)">
@@ -372,7 +379,7 @@
         <div class="container text-center">
                 <h2>CV</h2>
                 <img src="img/CV_Armand_CHANAL_V02.png" alt="CV Armand Chanal" class="cv-img">
-                <a href="download/CV_Armand_CHANAL_V02.pdf" class="boton-elegante">Télécharger le CV !</a>
+                <a href="download/CV_Armand_CHANAL_V02.pdf" class="boton-elegante" target="_blank">Télécharger le CV !</a>
         </div>
     </section>
 
@@ -390,6 +397,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2026 Armand CHANAL.</p>
+        </div>
     </footer>
 
 
@@ -585,7 +593,7 @@
 
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
     <span class="close-lightbox">&times;</span>
-    <img id="lightbox-img" src="" alt="Agrandissement">
+    <img id="lightbox-img" src="img/Create_Aca_Screen.png" alt="Agrandissement">
 </div>
 
 </body>
