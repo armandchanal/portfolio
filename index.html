@@ -5,18 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Armand CHANAL">
     <title>Armand CHANAL - Portfolio</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style.css?v=2">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
             <a href="#" class="logo">Armand CHANAL</a>
-            <button class="hamburger" id="hamburger-menu" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
             <ul class="nav-links" id="nav-menu">
                 <li><a href="#about" class="btn2">À propos</a></li>
                 <li><a href="#formation" class="btn2">Formations</a></li>
@@ -26,9 +21,20 @@
                 <li><a href="#CV" class="btn2">CV</a></li>
                 <li><a href="#contacts" class="btn2">Contacts</a></li>
             </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Activer le mode sombre" title="Mode sombre">
+                    <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+                    <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+                </button>
+                <button class="hamburger" id="hamburger-menu" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
         </div>
     </nav>
-    <script src="js/script.js"></script>
+    <script src="js/script.js?v=2"></script>
     <header class="hero">
         <div class="container hero-content">
             
@@ -66,8 +72,9 @@
             </p>
             <br>
             <p>
-                Je suis actuellement à la recherche d'une <strong>alternance pour la rentrée 2026</strong> 
+                Je suis continuellement à la recherche d'une <strong>alternance pour la rentrée 2026</strong> 
                 (rythme : 1 mois en entreprise / 1 mois en formation).
+                Mon objectif est ensuite de m'insérer dans le monde professionnel à l'issue de mon BUT, autour de septembre 2028.
             </p>
         </div>
     </section>
@@ -226,6 +233,64 @@
 
                 <div class="card">
                     <div class="card-content">
+                        <h3>Projet Réseau</h3>
+                        <p>
+                            Mise en place d'une infrastructure réseau dans le cadre de ma formation, avec configuration d'équipements, adressage et tests de communication.
+                        </p>
+                        <a href="javascript:void(0)" onclick="openSidebar('sidebar-sae-reseau')" class="btn-link">Voir détails &rarr;</a>
+                    </div>
+                    <div id="sidebar-sae-reseau" class="sidebar">
+                        <button class="close-btn" onclick="closeSidebar()">&times;</button>
+                        <div class="sidebar-content">
+                            <span class="sidebar-tag">Projet Réseau</span>
+                            <h2>Projet Réseau</h2>
+                            <div class="sidebar-image-container">
+        <img src="img/PKT_Screen.png" 
+             alt="Interface du Launcher CreateAcademy" 
+             class="zoomable-img" 
+             onclick="openLightbox(this)">
+        <p class="img-caption">Cliquez pour agrandir</p>
+    </div>
+
+                            <div class="sidebar-section">
+                                <h3>Contexte</h3>
+                                <p>
+                                    Dans le cadre de ma première année de BUT Réseaux et Télécommunications, j'ai travaillé sur les TP d'un projet orientée réseau.
+                                    L'objectif était de mettre en pratique les notions vues en cours et en TD dans une situation proche d'un cas professionnel.
+                                </p>
+                            </div>
+
+                            <div class="sidebar-section">
+                                <h3>Objectifs</h3>
+                                <p>
+                                    Les TP consistait à concevoir une petite infrastructure réseau fonctionnelle, à organiser l'adressage IP,
+                                    à configurer les équipements nécessaires et à vérifier que les machines pouvaient communiquer correctement.
+                                </p>
+                            </div>
+
+                            <div class="sidebar-section">
+                                <h3>Travail réalisé</h3>
+                                <ul class="sidebar-list">
+                                    <li>Analyse du besoin et préparation du plan d'adressage.</li>
+                                    <li>Configuration d'équipements réseau avec mise en place de VLAN et de ports adaptés.</li>
+                                    <li>Participation à la répartition des tâches au sein du groupe, entre configuration, tests et documentation.</li>
+                                    <li>Réalisation de tests de connectivité pour valider le fonctionnement de l'infrastructure.</li>
+                                </ul>
+                            </div>
+
+                            <div class="sidebar-section">
+                                <h3>Résultats</h3>
+                                <p>
+                                    Ce projet m'a permis de mieux comprendre la logique d'une architecture réseau et de gagner en méthode.
+                                    Le résultat final était une infrastructure cohérente, testée et documentée, avec des communications fonctionnelles entre les équipements configurés.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
                         <h3>CreateAcademyLauncher</h3>
                         <p>
                             Création d'un launcher pour un serveur Minecraft, permettant aux utilisateurs de se connecter facilement et de gérer leurs mods.
@@ -306,9 +371,17 @@
 
     <div class="skill-card" onclick="openSidebar('sidebar-web')" style="cursor: pointer;">
         <div class="skill-icon">💻</div>
-        <h3>Développement Web</h3>
-        <p>HTML5 / CSS3</p>
-        <p>Création de Portfolio</p>
+        <h3>Programmation</h3>
+        <p>HTML5 / CSS3 / JavaScript</p>
+        <p>Python & Bash</p>
+        <p style="font-size: 0.9rem; margin-top: 10px; color: var(--primary-color);">Voir les détails &rarr;</p>
+    </div>
+
+    <div class="skill-card" onclick="openSidebar('sidebar-telecom')" style="cursor: pointer;">
+        <div class="skill-icon">📞</div>
+        <h3>Téléphonie & Télécoms</h3>
+        <p>Xivo / Yealink</p>
+        <p>Communications internes</p>
         <p style="font-size: 0.9rem; margin-top: 10px; color: var(--primary-color);">Voir les détails &rarr;</p>
     </div>
 
@@ -415,7 +488,7 @@
             
             <div class="accordion-item">
                 <button class="accordion-header" onclick="toggleAccordion(this)">
-                    Équipements réseaux
+                    Équipements réseaux & Téléphonie
                     <span class="arrow">▼</span>
                 </button>
                 <div class="accordion-body">
@@ -424,6 +497,7 @@
                         <li><strong>Switchs (Cisco) :</strong> Configuration CLI, sécurisation, création de VLAN, configuration des ports.</li>
                         <li><strong>Routeurs (Cisco) :</strong> Configuration CLI, sécurisation, routage statique et dynamique (RIP et OSPF).</li>
                         <li><strong>Wi-Fi (D-Link) :</strong> Configuration de points d'accès wifi et supervision sur interface web.</li>
+                        <li><strong>Téléphonie (Yealink et Xivo) :</strong> Configuration et gestion des lignes téléphoniques d'entreprise, pour des communications internes et externes.</li>
                     </ul>
                 </div>
             </div>
@@ -437,7 +511,7 @@
                     <p>Mise en place de services essentiels sur serveurs Linux :</p>
                     <ul class="sidebar-list">
                         <li><strong>Configuration : </strong>Mise en place d'adressage IP sur les serveurs Linux.</li>
-                        <li><strong>Services : </strong>Serveur Web (Apache).</li>
+                        <li><strong>Services : </strong>Serveur Web (Apache), Serveur de base de données (MySQL).</li>
                         <li><strong>Sécurité : </strong>Mise en place de pare-feu, afin d'assurer la sécurité des équipements.</li>
                     </ul>
                 </div>
@@ -462,12 +536,55 @@
         </div>
 </div>
 
+<div id="sidebar-telecom" class="sidebar">
+    <button class="close-btn" onclick="closeSidebar()">&times;</button>
+
+    <div class="sidebar-content">
+        <span class="sidebar-tag">Compétence Technique</span>
+        <h2>Téléphonie & Télécoms</h2>
+        <p style="margin-bottom: 2rem; color: #666;">Communication d'entreprise</p>
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                    Téléphonie IP
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="accordion-body">
+                    <p>Découverte et configuration de solutions de téléphonie utilisées en entreprise :</p>
+                    <ul class="sidebar-list">
+                        <li><strong>Xivo :</strong> Gestion de lignes, d'utilisateurs et de communications internes.</li>
+                        <li><strong>Yealink :</strong> Configuration de téléphones IP et association aux comptes utilisateurs.</li>
+                        <li><strong>Tests :</strong> Vérification des appels internes et du bon fonctionnement des postes.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                    Télécommunications
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="accordion-body">
+                    <p>Compréhension progressive des services télécoms et de leur lien avec les réseaux :</p>
+                    <ul class="sidebar-list">
+                        <li>Étude des communications voix sur IP.</li>
+                        <li>Compréhension du rôle des équipements dans une infrastructure de télécommunication.</li>
+                        <li>Mise en relation entre réseau local, services et usages utilisateurs.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div id="sidebar-web" class="sidebar">
     <button class="close-btn" onclick="closeSidebar()">&times;</button>
     
     <div class="sidebar-content">
         <span class="sidebar-tag">Compétence Technique</span>
-        <h2>Développement</h2>
+        <h2>Programmation</h2>
         <p style="margin-bottom: 2rem; color: #666;">Création de sites et de programmes</p>
 
         <div class="accordion">
@@ -482,6 +599,8 @@
                         <li><strong>HTML5 :</strong> Structure sémantique (header, nav, section...).</li>
                         <li><strong>CSS3 :</strong> Mise en page moderne (Flexbox, Grid), variables CSS, Design Responsive.</li>
                         <li><strong>JS (JavaScript) : </strong>Création de sidebar en cliquant sur des onglets, permet de changer d'onglets (switchTab), animations du site.</li>
+                        <li><strong>PHP : </strong>Création de pages web dynamiques et de scripts serveur.</li>
+                        <li><strong>MySQL : </strong>Gestion de bases de données pour stocker et récupérer des informations, afin de permettre un accès rapide et sécurisé aux données depuis une page PHP.</li>
                     </ul>
                 </div>
             </div>
