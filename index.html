@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Armand CHANAL">
     <title>Armand CHANAL - Portfolio</title>
-    <link rel="stylesheet" href="style/style.css?v=2">
+    <link rel="stylesheet" href="style/style.css?v=3">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -40,7 +40,7 @@
             
             <div class="hero-text">
                 <h1>Bonjour, je suis <span class="highlight">Armand CHANAL</span>.</h1>
-                <h2>Étudiant en BUT Réseaux et Télécommunications</h2>
+                <h2>Étudiant en 2e année de BUT Réseaux et Télécommunications, parcours Cybersécurité</h2>
             </div>
 
             <div class="hero-image">
@@ -54,7 +54,7 @@
         <div class="container">
             <h2>À propos de moi</h2>
             <p>
-                Je m'appelle Armand CHANAL, j'ai 18 ans et je suis actuellement étudiant en <strong>BUT Réseaux et Télécommunications</strong> à l'IUT d'Aubière.
+                Je m'appelle Armand CHANAL, j'ai 19 ans et je suis actuellement étudiant en <strong>2e année de BUT Réseaux et Télécommunications</strong>, parcours <strong>Cybersécurité</strong>, à l'IUT d'Aubière.
                 Je suis passionné par l'<strong>informatique</strong> et les <strong>nouvelles technologies</strong>.
             </p>
             <br>
@@ -72,8 +72,8 @@
             </p>
             <br>
             <p>
-                Je suis actuellement à la recherche d'une <strong>alternance pour la rentrée 2026</strong>
-                (rythme : 1 mois en entreprise / 1 mois en formation).
+                Je suis actuellement à la recherche d'un <strong>stage d'avril à juin 2027</strong>,
+                avec la volonté de poursuivre ensuite en <strong>alternance pour ma 3e année</strong> de BUT.
                 Mon objectif est ensuite de m'insérer dans le monde professionnel à l'issue de mon BUT, autour de septembre 2028.
             </p>
         </div>
@@ -89,14 +89,16 @@
                         <h3>BUT Réseaux et Télécommunications</h3>
                         <p>
                             IUT d'Aubière (2025 - Présent)<br>
+                            2e année, parcours Cybersécurité
                         </p>
                         <a href="javascript:void(0)" onclick="openSidebar('sidebar-but')" class="btn-link">Voir détails &rarr;</a>                    
                     </div>
                     <div id="sidebar-but" class="sidebar">
-                        <button class="close-btn" onclick="closeSidebar()">&times;</button>
+                        <button class="close-btn" onclick="closeSidebar()" aria-label="Fermer">&times;</button>
                         <div class="sidebar-content">
                             <span class="sidebar-tag">Formation</span>
                             <h2>BUT Réseaux et Télécommunications</h2>
+                            <p style="margin-bottom: 2rem; color: #666;">2e année &mdash; Parcours Cybersécurité</p>
                             <div class="sidebar-section">
                                 <h3>Objectifs de la formation</h3>
                                 <p>
@@ -116,7 +118,9 @@
                             <div class="sidebar-section">
                                 <h3>Et maintenant ?</h3>
                                 <p>
-                                   Actuellement en première année, je suis en train d'acquérir des compétences solides en administration système et réseau.
+                                   Actuellement en deuxième année, dans le parcours Cybersécurité, je continue à développer mes compétences en administration système et réseau,
+                                   tout en abordant la sécurisation des services, comme le DNS avec DNSSEC, et les tests d'intrusion en laboratoire.
+                                   Je recherche un stage d'avril à juin 2027, puis une alternance pour ma troisième année.
                                 </p>
                             </div>
                         </div>
@@ -131,7 +135,7 @@
                         <a href="javascript:void(0)" onclick="openSidebar('sidebar-sti2d')" class="btn-link">Voir détails &rarr;</a>                    
                     </div>
                     <div id="sidebar-sti2d" class="sidebar">
-                        <button class="close-btn" onclick="closeSidebar()">&times;</button>
+                        <button class="close-btn" onclick="closeSidebar()" aria-label="Fermer">&times;</button>
                         <div class="sidebar-content">
                             <span class="sidebar-tag">Formation</span>
                             <h2>BAC STI2D</h2>
@@ -190,7 +194,7 @@
                         <a href="javascript:void(0)" onclick="openSidebar('sidebar-portfolio')" class="btn-link">Voir détails &rarr;</a>  
                     </div>
                     <div id="sidebar-portfolio" class="sidebar">
-                        <button class="close-btn" onclick="closeSidebar()">&times;</button>
+                        <button class="close-btn" onclick="closeSidebar()" aria-label="Fermer">&times;</button>
                         <div class="sidebar-content">
                             <span class="sidebar-tag">Développement Web</span>
                     <h2>Portfolio Personnel</h2>
@@ -240,7 +244,7 @@
                         <a href="javascript:void(0)" onclick="openSidebar('sidebar-sae-reseau')" class="btn-link">Voir détails &rarr;</a>
                     </div>
                     <div id="sidebar-sae-reseau" class="sidebar">
-                        <button class="close-btn" onclick="closeSidebar()">&times;</button>
+                        <button class="close-btn" onclick="closeSidebar()" aria-label="Fermer">&times;</button>
                         <div class="sidebar-content">
                             <span class="sidebar-tag">Projet Réseau</span>
                             <h2>Projet Réseau</h2>
@@ -292,6 +296,61 @@
 
                 <div class="card">
                     <div class="card-content">
+                        <h3>Projet DNS et DNSSEC</h3>
+                        <p>
+                            TP de 2e année : mise en place de serveurs DNS BIND9, sécurisation des transferts de zone et étude de DNSSEC.
+                        </p>
+                        <a href="javascript:void(0)" onclick="openSidebar('sidebar-dnssec')" class="btn-link">Voir détails &rarr;</a>
+                    </div>
+                    <div id="sidebar-dnssec" class="sidebar">
+                        <button class="close-btn" onclick="closeSidebar()" aria-label="Fermer">&times;</button>
+                        <div class="sidebar-content">
+                            <span class="sidebar-tag">Cybersécurité</span>
+                            <h2>Projet DNS et DNSSEC</h2>
+
+                            <div class="sidebar-section">
+                                <h3>Contexte</h3>
+                                <p>
+                                    Dans le cadre de ma deuxième année de BUT Réseaux et Télécommunications (parcours Cybersécurité),
+                                    j'ai réalisé un travail pratique de services réseaux avancés consacré au DNS et à sa sécurisation avec DNSSEC.
+                                </p>
+                            </div>
+
+                            <div class="sidebar-section">
+                                <h3>Objectifs</h3>
+                                <p>
+                                    Comprendre le fonctionnement d'une résolution DNS, déployer ses propres serveurs DNS,
+                                    sécuriser les échanges entre serveurs et découvrir comment DNSSEC garantit l'authenticité et l'intégrité des réponses.
+                                </p>
+                            </div>
+
+                            <div class="sidebar-section">
+                                <h3>Travail réalisé</h3>
+                                <ul class="sidebar-list">
+                                    <li>Installation et configuration de BIND9 sous Linux.</li>
+                                    <li>Création de zones DNS directes et inverses, avec un serveur primaire et un serveur secondaire.</li>
+                                    <li>Vérification des réponses avec <code>dig</code> et observation des échanges avec Wireshark.</li>
+                                    <li>Sécurisation des transferts de zone entre serveurs avec une clé TSIG.</li>
+                                    <li>Étude de DNSSEC : chaîne de confiance, clés KSK/ZSK, signatures RRSIG et NSEC3.</li>
+                                    <li>Signature d'une zone de test et analyse des réponses DNSSEC avec <code>dig</code> et DNSViz.</li>
+                                    <li>Étude du rôle d'une ancre de confiance (trust anchor) pour la validation des signatures.</li>
+                                </ul>
+                            </div>
+
+                            <div class="sidebar-section">
+                                <h3>Résultats</h3>
+                                <p>
+                                    Les zones étaient correctement résolues par les deux serveurs et le transfert de zone vers le serveur secondaire a été vérifié.
+                                    Ce TP m'a permis de comprendre concrètement pourquoi le DNS doit être sécurisé, comment fonctionne la chaîne de confiance DNSSEC
+                                    et pourquoi un résolveur refuse une réponse dont la signature est invalide.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
                         <h3>CreateAcademyLauncher</h3>
                         <p>
                             Création d'un launcher pour un serveur Minecraft, permettant aux utilisateurs de se connecter facilement et de gérer leurs mods.
@@ -299,7 +358,7 @@
                         <a href="javascript:void(0)" onclick="openSidebar('sidebar-launcher')" class="btn-link">Voir détails &rarr;</a>  
                     </div>
                     <div id="sidebar-launcher" class="sidebar">
-                        <button class="close-btn" onclick="closeSidebar()">&times;</button>
+                        <button class="close-btn" onclick="closeSidebar()" aria-label="Fermer">&times;</button>
                         <div class="sidebar-content">
                             <span class="sidebar-tag">Développement Web et JS</span>
                     <h2>CreateAcademyLauncher</h2>
@@ -386,6 +445,14 @@
         <p style="font-size: 0.9rem; margin-top: 10px; color: var(--primary-color);">Voir les détails &rarr;</p>
     </div>
 
+    <div class="skill-card" onclick="openSidebar('sidebar-cyber')" style="cursor: pointer;">
+        <div class="skill-icon">🛡️</div>
+        <h3>Cybersécurité</h3>
+        <p>DNSSEC (pratique en TP)</p>
+        <p>Pentesting en laboratoire (notions étudiées)</p>
+        <p style="font-size: 0.9rem; margin-top: 10px; color: var(--primary-color);">Voir les détails &rarr;</p>
+    </div>
+
     <div class="skill-card" onclick="openSidebar('sidebar-maintenance')" style="cursor: pointer;">
         <div class="skill-icon">🔧</div>
         <h3>Maintenance</h3>
@@ -454,8 +521,8 @@
     <section id="CV" class="section">
         <div class="container text-center">
                 <h2>CV</h2>
-                <img src="img/CV_Armand_CHANAL_V02.png" alt="CV Armand Chanal" class="cv-img">
-                <a href="download/CV_Armand_CHANAL_V02.pdf" class="boton-elegante" target="_blank">Télécharger le CV !</a>
+                <img src="img/CV_Armand_CHANAL_DEF.png" alt="CV Armand Chanal" class="cv-img">
+                <a href="download/CV_Armand_CHANAL_DEF.pdf" class="boton-elegante" target="_blank">Télécharger le CV !</a>
         </div>
     </section>
 
@@ -463,7 +530,7 @@
         <div class="container hero-content">
             <div class="hero-text">
                 <h2>Contacts</h2>
-                <p><strong>Mail : </strong>armand.chanal@etu.uca.com
+                <p><strong>Mail : </strong>armand.chanal@etu.uca.fr
                 </p>
             </div>
         </div>
@@ -480,7 +547,7 @@
 <div id="overlay" class="overlay" onclick="closeSidebar()"></div>
 
 <div id="sidebar-reseaux" class="sidebar">
-    <button class="close-btn" onclick="closeSidebar()">&times;</button>
+    <button class="close-btn" onclick="closeSidebar()" aria-label="Fermer">&times;</button>
     
     <div class="sidebar-content">
         <span class="sidebar-tag">Compétence Technique</span>
@@ -540,7 +607,7 @@
 </div>
 
 <div id="sidebar-telecom" class="sidebar">
-    <button class="close-btn" onclick="closeSidebar()">&times;</button>
+    <button class="close-btn" onclick="closeSidebar()" aria-label="Fermer">&times;</button>
 
     <div class="sidebar-content">
         <span class="sidebar-tag">Compétence Technique</span>
@@ -583,7 +650,7 @@
 
 
 <div id="sidebar-web" class="sidebar">
-    <button class="close-btn" onclick="closeSidebar()">&times;</button>
+    <button class="close-btn" onclick="closeSidebar()" aria-label="Fermer">&times;</button>
     
     <div class="sidebar-content">
         <span class="sidebar-tag">Compétence Technique</span>
@@ -639,8 +706,51 @@
     </div>
 </div>
 
+<div id="sidebar-cyber" class="sidebar">
+    <button class="close-btn" onclick="closeSidebar()" aria-label="Fermer">&times;</button>
+
+    <div class="sidebar-content">
+        <span class="sidebar-tag">Compétence Technique</span>
+        <h2>Cybersécurité</h2>
+        <p style="margin-bottom: 2rem; color: #666;">Parcours Cybersécurité &mdash; BUT R&T 2e année</p>
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                    DNSSEC &mdash; pratique en TP
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="accordion-body">
+                    <p>Sécurisation du DNS mise en pratique lors d'un TP de services réseaux avancés :</p>
+                    <ul class="sidebar-list">
+                        <li><strong>Transferts de zone :</strong> Authentification des échanges entre serveurs primaire et secondaire avec TSIG.</li>
+                        <li><strong>DNSSEC :</strong> Rôle des clés KSK/ZSK, des signatures RRSIG et de NSEC3.</li>
+                        <li><strong>Analyse :</strong> Lecture des réponses signées avec <code>dig</code> et vérification de la chaîne de confiance avec DNSViz.</li>
+                        <li><strong>Validation :</strong> Compréhension du rôle d'une ancre de confiance pour un résolveur.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                    Pentesting en laboratoire &mdash; notions étudiées
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="accordion-body">
+                    <p>Découverte des tests d'intrusion dans un cadre pédagogique, sur un laboratoire isolé et autorisé :</p>
+                    <ul class="sidebar-list">
+                        <li>Introduction à la démarche et au cadre légal d'un test d'intrusion.</li>
+                        <li>Étude des risques d'empoisonnement de cache DNS.</li>
+                        <li>Réflexion sur les mécanismes de détection et de protection, dont DNSSEC.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="sidebar-maintenance" class="sidebar">
-    <button class="close-btn" onclick="closeSidebar()">&times;</button>
+    <button class="close-btn" onclick="closeSidebar()" aria-label="Fermer">&times;</button>
     
     <div class="sidebar-content">
         <span class="sidebar-tag">Compétence Technique</span>
@@ -697,7 +807,7 @@
 </div>
 
 <div id="sidebar-humain" class="sidebar">
-    <button class="close-btn" onclick="closeSidebar()">&times;</button>
+    <button class="close-btn" onclick="closeSidebar()" aria-label="Fermer">&times;</button>
     
     <div class="sidebar-content">
         <span class="sidebar-tag">Compétences Humaines</span>
@@ -714,7 +824,7 @@
 </div>
 
 <div id="sidebar-photo" class="sidebar">
-    <button class="close-btn" onclick="closeSidebar()">&times;</button>
+    <button class="close-btn" onclick="closeSidebar()" aria-label="Fermer">&times;</button>
 
     <div class="sidebar-content">
         <span class="sidebar-tag">Loisirs</span>
@@ -733,12 +843,24 @@
 
         <div class="sidebar-section" style="margin-top: 2rem;">
             <h3>The last of us</h3>
-            <img src="img/photos/paysage3.JPG" alt="Paysage 3" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+            <img src="img/photos/paysage3.jpg" alt="Paysage 3" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
         </div>
         <div class="sidebar-section" style="margin-top: 2rem;">
-            <a href="https://www.instagram.com/armandchh.photo/" class="btn-link"> Voir mon instagram &rarr;</a>
+            <a href="https://www.instagram.com/armandchh.photo/" class="btn-instagram" target="_blank" rel="noopener noreferrer">
+                <span class="btn-instagram-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"></circle>
+                    </svg>
+                </span>
+                <span class="btn-instagram-text">
+                    Voir mon Instagram
+                    <span class="btn-instagram-handle">@armandchh.photo</span>
+                </span>
+                <span class="btn-instagram-arrow" aria-hidden="true">&rarr;</span>
+            </a>
         </div>
-    </div>
     </div>
 </div>
 

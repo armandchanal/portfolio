@@ -382,16 +382,98 @@ footer {
     position: absolute;
     top: 20px;
     right: 25px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: none;
     border: none;
-    font-size: 2.5rem;
+    border-radius: 50%;
+    font-size: 0; /* Masque le caractère « × » : la croix est dessinée en CSS pour être parfaitement centrée */
     cursor: pointer;
     color: #888;
-    transition: color 0.2s ease, transform 0.2s ease;
+    transform-origin: 50% 50%;
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.3s ease;
 }
+.close-btn::before,
+.close-btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 22px;
+    height: 2.5px;
+    border-radius: 2px;
+    background: currentColor;
+}
+.close-btn::before { transform: translate(-50%, -50%) rotate(45deg); }
+.close-btn::after { transform: translate(-50%, -50%) rotate(-45deg); }
 .close-btn:hover {
     color: var(--primary-color);
+    background-color: var(--bg-light);
     transform: rotate(90deg);
+}
+
+/* Bouton Instagram (panneau Photographie) */
+.btn-instagram {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 24px 12px 14px;
+    border: 2px solid var(--primary-color);
+    border-radius: 999px;
+    background: var(--primary-color);
+    color: var(--white);
+    font-weight: bold;
+    box-shadow: 0 6px 16px rgba(45, 104, 84, 0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+.btn-instagram-icon {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+    transition: background-color 0.25s ease;
+}
+.btn-instagram-icon svg {
+    width: 20px;
+    height: 20px;
+}
+.btn-instagram-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+.btn-instagram-handle {
+    font-size: 0.8rem;
+    font-weight: 400;
+    opacity: 0.85;
+}
+.btn-instagram-arrow {
+    margin-left: 4px;
+    transition: transform 0.25s ease;
+}
+.btn-instagram:hover {
+    background: var(--white);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--strong-shadow);
+}
+.btn-instagram:hover .btn-instagram-icon {
+    background: rgba(45, 104, 84, 0.12);
+}
+.btn-instagram:hover .btn-instagram-arrow {
+    transform: translateX(4px);
+}
+.btn-instagram:focus-visible {
+    outline: 3px solid rgba(45, 104, 84, 0.25);
+    outline-offset: 4px;
 }
 
 /* Contenu interne */
@@ -911,6 +993,24 @@ body.dark-mode .sidebar [style*="color: #666"] {
 body.dark-mode .skill-card .skill-note,
 body.dark-mode .close-btn {
     color: #95a3ab;
+}
+
+body.dark-mode .close-btn:hover {
+    color: var(--primary-color);
+    background-color: #10171b;
+}
+
+body.dark-mode .btn-instagram {
+    color: #0b1411;
+}
+
+body.dark-mode .btn-instagram:hover {
+    background: #151d22;
+    color: var(--primary-color);
+}
+
+body.dark-mode .btn-instagram:hover .btn-instagram-icon {
+    background: rgba(95, 200, 159, 0.15);
 }
 
 body.dark-mode .tag,
